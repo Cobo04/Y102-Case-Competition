@@ -26,11 +26,6 @@ curS = ""
 while True:
     ret, frame = cap.read()
 
-    # kernel = np.array([[0, -1, 0],
-    # [-1, 5, -1],
-    # [0, -1, 0]])
-    # frame = cv2.filter2D(frame, -1, kernel)
-
     if ret:
         ret_qr, decoded_info, points, _ = qcd.detectAndDecodeMulti(frame)
         if ret_qr:
@@ -43,7 +38,7 @@ while True:
                     color = (0, 255, 0)
                 else:
                     color = (0, 0, 255)
-                frame = cv2.polylines(frame, [p.astype(int)], True, color, 8)
+                cv2.polylines(frame, [p.astype(int)], True, color, 8)
         cv2.imshow(window_name, frame)
 
     if cv2.waitKey(delay) & 0xFF == ord('q'):

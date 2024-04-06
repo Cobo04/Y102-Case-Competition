@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+        <script src="{{url_for('static', filename='script.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>Y102 Case Competition</title>
+
+    </head>
+
+    <body>
+        
+
+        <div class="container">
+
+            <div class="container2">
+
+                <div class="innerTop">
+
+                    <div class="leftTopBar">
+                        7:40
+                    </div>
+
+                    <div class="topBar">
+
+                    </div>
+
+                    <div class="rightTopBar">
+                        . . . .
+                    </div>
+
+                </div>
+
+                <div class="innerMiddle">
+                    
+                    <img class="webcam" src="{{ url_for('video') }}">
+
+                    <div class="discovered" id="discover">
+                        Please Scan Code!
+                    </div>
+
+                    <p>QR-Code Data: <span id="randomNumberDiv"></span></p>
+
+                </div>
+
+                <div class="innerBottom">
+
+                    <div class="homeButton"></div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
